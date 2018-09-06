@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>
+    <%= htmlWebpackPlugin.options.title %>
+  </title>
+  <script>
+    !function (e) {
+      var cl = null;
+      function o() {
+        var d = e.document, a = d.documentElement;
+        var c = a.getBoundingClientRect().width > 750 ? 750 : a.getBoundingClientRect().width, b = c / (750 / 100);
+        a.style.fontSize = b + "px";
+      }
+      window.addEventListener("resize", () => {
+        clearTimeout(cl), cl = setTimeout(o, 300);
+      }, !1), o();
+
+    }(window);
+  </script>
+</head>
+
+<body>
+  <div id="container"></div>
+</body>
+
+</html>
